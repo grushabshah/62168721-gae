@@ -1,0 +1,11 @@
+runtime: custom
+env: flex
+service: flexcaller
+entrypoint: gunicorn --bind 0.0.0.0:8080 main:app
+
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 2
+  memory_gb: 2
+  disk_size_gb: 10
